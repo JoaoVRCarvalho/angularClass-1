@@ -1,2 +1,15 @@
-<h1>Pagina</h1>
+<h1>App</h1>
 <app-header></app-header>
+
+<router-outlet></router-outlet>
+
+<ul *ngFor="let item of list">
+  <div *ngIf="item.name === 'arroz'; else normalRender">
+    <li>{{'promo!!!!!!! ' + item.name}}: {{item.valor - 2}}</li>
+  </div>
+
+  <ng-template #normalRender>
+    <li>{{item.name}}: {{item.valor}}</li>
+  </ng-template>
+</ul>
+<button (click)="add()">adicionar</button>

@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app-primeira-aula';
+  list = [{
+    name: 'abobora',
+    valor: 32
+  }, {
+    name: 'arroz',
+    valor: 22
+  }]
+
+  add(): void {
+    console.log('add?');
+  }
 }
